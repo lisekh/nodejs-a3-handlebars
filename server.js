@@ -1,9 +1,12 @@
 var express = require('express');
+var exphbs=require('express-handlebars');
 var app = express();
 var path = require('path');
 
-app.set('view engine', 'ejs');
+app.set('view engine', 'handlebars');
 app.use(express.static(__dirname + '/public'));
+
+app.engine('handlebars', exphbs({defaultLayout:'main'}));
 
 var routes = require('./routes/routes.js');
 

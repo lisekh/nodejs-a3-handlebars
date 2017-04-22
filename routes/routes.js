@@ -9,21 +9,25 @@ exports.city = function(req, res) {
     var city_name = req.params.city;
     var header, ptitle;
     var img_count = 4;
+    var img_count=[1,2];
+
 
     if(city_name === 'lofoten') {
         ptitle = "Lofoten";
         header = "Lofoten #1";
-        img_count = 2;
     } else if(city_name === 'kirkenes') {
         ptitle = "Kirkenes";
         header = "Kirkenes #2";
+        img_count.push(3)
+        img_count.push(4)
     } else if(city_name === 'tromso') {
         ptitle = "Tromsø";
         header = "Tromsø #3";
+        img_count.push(3)
+        img_count.push(4)
     } else if(city_name === 'bergen') {
         ptitle = "Bergen";
         header = "Bergen #4";
-        img_count = 2;
     } else {
         // Undefined city requested
         ptitle = "No city";

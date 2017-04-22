@@ -1,0 +1,12 @@
+<div class="container">
+    <h1>{{>headline}}</h1>
+    <div class="row">
+        {{#each num_of_img}}
+        <div class="col-md-6">
+            <div class="thumbnail">
+                  <img src="/images/{{../city}}/{{../city}}-{{this}}.jpg"/>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
